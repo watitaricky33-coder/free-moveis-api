@@ -413,7 +413,9 @@ process.on('unhandledRejection', (reason) => console.error('[diagnostic] unhandl
 const PORT = config.port;
 const HOST = process.env.BIND_HOST || '0.0.0.0';
 
-const server = app.listen(PORT, HOST, () => {
+const server = process.env.VERCEL
+  ? null
+  : app.listen(PORT, HOST, () => {
   console.log(`TMDB Embed REST API listening on http://${HOST}:${PORT}`);
   if (HOST !== 'localhost') console.log(`Local access (if running on your machine): http://localhost:${PORT}`);
   console.log('Endpoints:');
@@ -429,6 +431,7 @@ const server = app.listen(PORT, HOST, () => {
   }
 });
 
-server.on('error', (err) => console.error('[diagnostic] server error', err));
-
+if (server) {
+  server.on('error', (err) => console.error('[diagnostic] server error', err));
+}
 module.exports = { app, server };
