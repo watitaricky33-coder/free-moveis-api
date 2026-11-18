@@ -1,0 +1,3 @@
+<resources>
+    <style name="Theme.TmdbEmbed" parent="android:Theme.Material.NoActionBar" />
+</resources>

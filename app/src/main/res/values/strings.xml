@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TMDB Embed</string>
+    <string name="nav_streams">Streams</string>
+    <string name="nav_status">Status</string>
+    <string name="nav_admin">Admin</string>
+    <string name="streams_hero_title">TMDB Stream Engine</string>
+    <string name="streams_hero_subtitle">Resolve direct &amp; /m3u8-proxy HLS streams by TMDB ID</string>
+    <string name="error_invalid_tmdb_id">TMDB ID must be numeric</string>
+    <string name="error_invalid_tv_params">TV shows require numeric season and episode</string>
+    <string name="error_no_playable_source">No playable source found across active providers</string>
+</resources>

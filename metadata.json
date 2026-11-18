@@ -1,0 +1,6 @@
+{
+  "name": "TMDB Embed",
+  "description": "Standalone TMDB stream aggregator, embedded /m3u8-proxy server, HLS player, and configuration console.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
